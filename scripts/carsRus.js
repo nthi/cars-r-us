@@ -3,8 +3,18 @@ import { ColorChoice } from "./Paints.js"
 import { TechChoice } from "./Technologies.js"
 import { WheelChoice } from "./Wheels.js"
 import { Orders } from "./orders.js"
+import { addCustomOrder } from "./database.js"
 
-
+//when customer clicks "Create custom order button," we need to store their choices permanently. Use customOrder state and addCustomOrder to click event
+document.addEventListener(
+    "click",
+    (event) => {
+        const itemclicked = event.target
+        if (itemclicked.id === "orderButton") {
+            addCustomOrder()
+        }
+    }
+)
 
 export const CarsRus = () => {
     return `

@@ -1,5 +1,16 @@
 import { getColors, setColor } from "./database.js";
 
+//event listener
+//this event listener hears the tech choice and sets the tech value in the orderBuilder
+document.addEventListener(
+    "change",
+    (event) => {
+        if (event.target.name === "paint") {
+            setColor(parseInt(event.target.value))
+        }
+    }
+)
+
 const colors = getColors()
 //generate <select> element with child <option> as html rep of each object. I'm using .map, but we could use for/of loop or one string
 //add event listener that reacts to the customer choosing an option
@@ -22,13 +33,3 @@ export const ColorChoice = () => {
 
 }
 
-//event listener
-//this event listener hears the tech choice and sets the tech value in the orderBuilder
-document.addEventListener(
-    "change",
-    (event) => {
-        if (event.target.name === "paint") {
-            setColor(parseInt(event.target.value))
-        }
-    }
-)

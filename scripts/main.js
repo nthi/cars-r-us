@@ -9,4 +9,4 @@ const renderAllHTML = () => {
     mainContainer.innerHTML = CarsRus()
 }
 
-renderAllHTML
+renderAllHTML()

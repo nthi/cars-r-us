@@ -2,6 +2,7 @@ import { InteriorChoice } from "./Interiors.js"
 import { ColorChoice } from "./Paints.js"
 import { TechChoice } from "./Technologies.js"
 import { WheelChoice } from "./Wheels.js"
+import { Orders } from "./orders.js"
 
 
 
@@ -27,7 +28,17 @@ export const CarsRus = () => {
             ${TechChoice()}
 
         </section>
-
+        
     </article>
-    `
+
+    <article>
+            <button id="orderButton">Place Car Order</button>
+    </article>
+
+    
+    <article class="makeOrder">
+        <h2>Custom Car Orders</h2>
+        ${Orders()}            
+    </article>
+        `
 }

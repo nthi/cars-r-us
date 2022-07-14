@@ -4,10 +4,13 @@ const interiors = getInteriors()
 
 //function that will build html string displaying a dropdown menu with all color choices
 export const InteriorChoice = () => {
-    let html = "<select id="interiorFabric">"
+    let html = `<h2>Interior</h2>`
+    
+    html += `<select id="fabric">`
+    html += `<option value="0">Select a technology package</option>`
     //start html for dropdown
 
-    const listInteriors = interiors.map(interior => {
+    const listInteriors = interiors.map( (interior) => {
         return `<option value="${interior.id}">${interior.interior}</option>` //build the html for the drop-down box
     })
 

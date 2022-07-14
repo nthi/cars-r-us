@@ -31,7 +31,7 @@ const database = {
             colorId: 3,
             interiorId: 2,
             techId: 3,
-            wheelId: 1
+            wheelId: 1,
             timestamp: 1614659931693
             //Should I set up one customOrder obj like in the jewelry project?
         }

@@ -5,32 +5,52 @@ const database = {
         { id: 1, color: "Silver", price: 500 },
         { id: 2, color: "Midnight Blue", price: 710 },
         { id: 3, color: "Firebrick Red", price: 965 },
-        {//color4}
+        { id: 4, color: "Spring Green", price: 413}
     ],
-//     sizes: [
-//         { id: 1, carets: 0.5, price: 405 },
-//         { id: 2, carets: 0.75, price: 782 },
-//         { id: 3, carets: 1, price: 1470 },
-//         { id: 4, carets: 1.5, price: 1997 },
-//         { id: 5, carets: 2, price: 3638 }
-//     ],
-//     metals: [
-//         { id: 1, metal: "Sterling Silver", price: 12.42 },
-//         { id: 2, metal: "14K Gold", price: 736.4 },
-//         { id: 3, metal: "24K Gold", price: 1258.9 },
-//         { id: 4, metal: "Platinum", price: 795.45 },
-//         { id: 5, metal: "Palladium", price: 1241.0 }
-//     ],
-//     customOrders: [
-//         {
-//             id: 1,
-//             metalId: 3,
-//             sizeId: 2,
-//             styleId: 3,
-//             timestamp: 1614659931693
-//         }
-//     ],
-// }
-
+    interiors: [
+        { id: 1, interior: "Beige Fabric", price: 405 },
+        { id: 2, interior: "Charcoal Fabric", price: 782 },
+        { id: 3, interior: "White LEather", price: 1470 },
+        { id: 4, interior: "Black Leather", price: 1997 }
+    ],
+    techPack: [
+        { id: 1, tech: "Basic Package", price: 100 },
+        { id: 2, tech: "Navigation Package", price: 200 },
+        { id: 3, tech: "Visibility Package", price: 300 },
+        { id: 4, tech: "Ultra Package", price: 400 }
+    ],
+    wheels: [
+        { id: 1, wheels: "17-inch Pair Radial", price: 100 },
+        { id: 2, wheels: "17-inch Pair Radial Black", price: 200 },
+        { id: 3, wheels: "18-inch Pair Spoke Silver", price: 300 },
+        { id: 4, wheels: "18-inch Pair Spoke Black", price: 400 }
+    ],
+    customOrders: [
+        {
+            id: 1,
+            colorId: 3,
+            interiorId: 2,
+            techId: 3,
+            wheelId: 1
+            timestamp: 1614659931693
+            //Should I set up one customOrder obj like in the jewelry project?
+        }
+    ],
+}
 
 //set up get functions
+export const getColors = () => {
+    return database.colors.map(color => ({...color}))
+}
+
+export const getInteriors = () => {
+    return database.interiors.map(interior => ({...interior}))
+}
+
+export const getTechPack = () => {
+    return database.techPack.map(tech => ({...tech}))
+}
+
+export const getWheels = () => {
+    return database.wheels.map(wheel => ({...wheel}))
+}

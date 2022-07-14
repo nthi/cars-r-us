@@ -1,3 +1,4 @@
+import { InteriorChoice } from "./Interiors.js"
 import { ColorChoice } from "./Paints.js"
 
 
@@ -7,22 +8,24 @@ export const CarsRus = () => {
     <h1>Cars 'R Us: Personal Car Builder</h1>
 
     <article class ="customChoices">
-        <h2>Paints</h2>
         <section class="paints">
-        ${ColorChoice()}
+            <h2>Paints</h2>
+            ${ColorChoice()}
         </section>
 
-        <article class =""></article>
-        <h2></h2>
-        <section class=""></section>
+        <section class="interiors">
+            <h2>Interiors</h2>
+            ${InteriorChoice()}
+        </section>
 
-        <article class =""></article>
-        <h2></h2>
-        <section class=""></section>
+        <section class="wheels">
+            <h2>Wheels</h2>
+        </section>
 
-        <article class =""></article>
-        <h2></h2>
-        <section class=""></section>
+        <section class="technologies">
+            <h2>Technologies</h2>
+        </section>
+
     </article>
     `
 }

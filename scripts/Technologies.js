@@ -22,7 +22,7 @@ export const TechChoice = () => {
 
     //start html for dropdown
     html += `<select id="tech">`
-    html +=`<option value ="0">Select a technology package</option>`
+    html +=`<option value="0">Select a technology package</option>`
 
     const listTechPacks = techs.map( (tech) => {
         return `<option value="${tech.id}">${tech.tech}</option>` //build the html for the drop-down box

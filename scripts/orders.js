@@ -34,7 +34,9 @@ const buildOrderListItem = (order) => {
         currency: "USD"
         }
     )
-    return `<li>${order.colorId} car with ${order.wheelId} wheels, ${order.interiorId} interior, and the ${order.techId} cost ${costString} and was placed on ${order.timeStamp}</li>`
+    return `<li>${foundColor.color} car with ${foundWheels.wheels} wheels, ${foundInterior.interior} interior, and the ${foundTech.tech} cost ${costString}.</li>`
+    //foundcolor.color etc.
+    //this is wrong b/c I need the color/wheel etc. and not the id
 }
 
 export const Orders = () => {

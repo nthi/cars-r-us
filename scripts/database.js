@@ -1,6 +1,6 @@
 //setup data structures
 const database = {
-    //orderBuilder: {},
+    orderBuilder: {},
     colors: [
         { id: 1, color: "Silver", price: 500 },
         { id: 2, color: "Midnight Blue", price: 710 },
@@ -35,8 +35,7 @@ const database = {
             timestamp: 1614659931693
             //Should I set up one customOrder obj like in the jewelry project?
         }
-    ],
-    orderBuilder: {}
+    ]
 }
 
 //set up get functions
